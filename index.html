@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Encore - DJ Setlist Creator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🎶 Encore - DJ Setlist Creator</h1>
+
+    <form id="songForm">
+      <input type="text" id="title" placeholder="Song Title" required />
+      <input type="text" id="artist" placeholder="Artist" required />
+      <input type="text" id="genre" placeholder="Genre" />
+      <input type="number" id="bpm" placeholder="BPM" />
+      <select id="event">
+        <option value="">Event Type</option>
+        <option value="wedding">Wedding</option>
+        <option value="club">Club</option>
+        <option value="chill">Chill</option>
+      </select>
+      <button type="submit">Add to Setlist</button>
+    </form>
+
+    <h2>Your Setlist</h2>
+    <ul id="setlist"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
