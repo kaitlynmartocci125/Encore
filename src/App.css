@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  background-color: #f4f0e8;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.page-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-box {
+  background-color: #fdf9f4;
+  border: 2px solid #c8b295;
+  border-radius: 20px;
+  padding: 40px 60px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h1 {
+  font-size: 2.5rem;
+  color: #8b6f47;
+  margin-bottom: 10px;
+}
+
+.login-box p {
+  color: #a08d74;
+  margin-bottom: 30px;
+}
+
+.spotify-button {
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: transparent;
+  border: 2px solid #b59163;
+  border-radius: 10px;
+  color: #b59163;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.spotify-button:hover {
+  background-color: #b59163;
+  color: #fff;
+}

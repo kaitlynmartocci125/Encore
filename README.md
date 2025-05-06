@@ -1,15 +1,12 @@
-# Encore
+# React + Vite
 
-## Description
-*Encore is a set list aid that takes in information about the performance (length of set, type of occassion, etc.) and curates a set list of however many songs is needed to last for the set. The app will take into account songs BPM, genre, artist and more in order to create the perfect set list in seconds that flows smoothly.*
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Key Features
-- Automatically connects to your Spotify account
-- Creates a curated set list automatically into your Spotify Account
-- Takes into account the length of set, type of occasion, BPM, genre, artist, etc when making the playlist
+Currently, two official plugins are available:
 
-## Project Status
-This project has not been started as of May 6, 2025
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
+## Expanding the ESLint configuration
 
-*Encore, because the crowd always wants one more*
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
