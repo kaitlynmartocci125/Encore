@@ -1,5 +1,5 @@
 import React from 'react';
-import pkceChallenge from 'pkce-challenge';
+import pkceChallenge from 'pkce-challenge'; // v2 uses default export
 
 const CLIENT_ID = import.meta.env.VITE_SPOTIFY_CLIENT_ID;
 const REDIRECT_URI = import.meta.env.VITE_SPOTIFY_REDIRECT_URI;
@@ -13,18 +13,19 @@ const SCOPES = [
 ];
 
 const loginWithSpotify = () => {
-  const { code_challenge, code_verifier } = pkceChallenge();
+  const { code_verifier, code_challenge } = pkceChallenge(); // ✅ v2 syntax
+
+  console.log("Generated code_verifier:", code_verifier);
   localStorage.setItem("pkce_verifier", code_verifier);
-  console.log("Generated verifier:", code_verifier);
+  console.log("Stored verifier:", localStorage.getItem("pkce_verifier"));
 
   const authUrl = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&response_type=code&redirect_uri=${encodeURIComponent(
     REDIRECT_URI
   )}&scope=${SCOPES.join('%20')}&code_challenge_method=S256&code_challenge=${code_challenge}`;
 
-  // Short delay to make sure localStorage is written
   setTimeout(() => {
     window.location.href = authUrl;
-  }, 200);
+  }, 300);
 };
 
 function Login() {
