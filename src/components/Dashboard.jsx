@@ -2,11 +2,9 @@ import React from 'react';
 
 function Dashboard() {
   return (
-    <div className="page-wrapper">
-      <div className="login-box">
-        <h1>Welcome to the Dashboard</h1>
-        <p>This is your logged-in experience. More features coming soon!</p>
-      </div>
+    <div style={{ textAlign: 'center', marginTop: '5rem' }}>
+      <h1>🎉 Logged in to Spotify!</h1>
+      <p>Access token is saved. You can now make API requests.</p>
     </div>
   );
 }

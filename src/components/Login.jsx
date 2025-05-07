@@ -14,15 +14,17 @@ const SCOPES = [
 
 const loginWithSpotify = () => {
   const { code_challenge, code_verifier } = pkceChallenge();
-
-  // ✅ Save verifier in localStorage BEFORE redirect
   localStorage.setItem("pkce_verifier", code_verifier);
+  console.log("Generated verifier:", code_verifier);
 
   const authUrl = `${AUTH_ENDPOINT}?client_id=${CLIENT_ID}&response_type=code&redirect_uri=${encodeURIComponent(
     REDIRECT_URI
   )}&scope=${SCOPES.join('%20')}&code_challenge_method=S256&code_challenge=${code_challenge}`;
 
-  window.location.href = authUrl;
+  // Short delay to make sure localStorage is written
+  setTimeout(() => {
+    window.location.href = authUrl;
+  }, 200);
 };
 
 function Login() {
